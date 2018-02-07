@@ -1,0 +1,38 @@
+@Parameter/ <Parameters> -> 1 value corresponding to any Parameter
+
+@DataProvider -> Achieve data driven testing
+
+@Test -> an annotation that you write before any method
+
+  @Test
+  public void loginToFacebook() {
+
+  }
+
+TestNG programs will not have a main method. However, all methods will be annotated with '@'
+
+@BeforeMethod
+@AfterMethod -> These are run before and after ANY test method
+
+@BeforeClass -> Runs once before the first test method in the current class is invoked
+@AfterClass -> Runs once after all tests methods belonging to the classes is run
+
+@BeforeTest -> before ALL test method belonging to the classes is run
+@AfterTest
+
+@BeforeSuite
+@AfterSuite
+
+<suite>
+  <test>
+    <classes>
+      <methods> </methods>
+    </classes>
+  </test>
+
+  <test>
+    <classes>
+      <methods> </methods>
+    </classes>
+  </test>
+</suite>
