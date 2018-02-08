@@ -1,16 +1,26 @@
 package testNG;
 
+//import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.Logger;
+//import utility.Log;
+//import org.testng.Reporter;
 import org.testng.annotations.*;
 
 public class TestAnnotations {
   @Test
-  public void f1() {
-	  System.out.println("Inside f1");	  
+  @Parameters({ "param1" })
+  public void f1(String param1) {
+//	  DOMConfigurator.configure("config/log4j.xml");
+//	  Log.info("New driver instantiated");
+	  System.out.println("Inside f1");
+	  System.out.println("param1: " + param1);
   }
   
   @Test
-  public void f2() {
+  @Parameters({ "param2" })
+  public void f2(String param2) {
 	  System.out.println("Inside f2");
+	  System.out.println("param2: " + param2);
   }
   
   @BeforeTest

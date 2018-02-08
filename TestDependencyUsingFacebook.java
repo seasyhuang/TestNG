@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
@@ -12,7 +13,7 @@ public class TestDependencyUsingFacebook {
 
 	WebDriver driver;
 
-	@Test
+	@BeforeTest
 	public void openBrowser() {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\huangti1\\selenium\\chromedriver.exe");
@@ -26,12 +27,19 @@ public class TestDependencyUsingFacebook {
 
 	}
 
-	@Test(dependsOnMethods = { "openBrowser" })
+	@Test
 	public void loginToFacebook() {
 		
 		driver.findElement(By.id("email")).sendKeys("somename");
 		driver.findElement(By.id("pass")).sendKeys("pass");
 		driver.findElement(By.id("loginbutton")).submit();
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

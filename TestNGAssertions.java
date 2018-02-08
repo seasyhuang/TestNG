@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public class TestNGAssertions {
-	
+
 	WebDriver driver;
-	
+		
 	@BeforeTest
 	public void invokeBrowser() {
 		
@@ -27,7 +27,7 @@ public class TestNGAssertions {
 
 	@Test
 	public void testEquality() {
-		Assert.assertEquals(true, isEqual(10, 0));
+		//Assert.assertEquals(true, isEqual(10, 0));
 		System.out.println("Assertion");
 	}
 	
@@ -46,9 +46,9 @@ public class TestNGAssertions {
 		System.out.println("getTitle");
 	}
 	
-	@AfterTest
-	public void closeBrowser() {
-		driver.quit();
-	}
+//	@AfterTest
+//	public void closeBrowser() {
+//		driver.quit();
+//	}
 
 }
