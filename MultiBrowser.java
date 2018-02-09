@@ -59,7 +59,7 @@ public class MultiBrowser {
 		passwordField.sendKeys(password);
 		passwordField.sendKeys(Keys.ENTER);
 		
-		Assert.assertTrue(false);
+		Assert.assertTrue(false);			// automatically fails this just to prove it works
 		
 	}
 
